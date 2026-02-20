@@ -1,0 +1,310 @@
+/* =====================================================
+   RevVault — Animations & Keyframes
+   ===================================================== */
+
+/* ——— Fade In ——— */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ——— Slide Up ——— */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ——— Slide In Left ——— */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ——— Pulse Dot ——— */
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.4);
+        opacity: 0.6;
+    }
+}
+
+/* ——— Skeleton Shimmer ——— */
+@keyframes shimmer {
+    from {
+        background-position: -600px 0;
+    }
+
+    to {
+        background-position: 600px 0;
+    }
+}
+
+.skeleton-shimmer {
+    background: linear-gradient(90deg,
+            var(--bg-card) 0%,
+            var(--bg-card-2) 50%,
+            var(--bg-card) 100%);
+    background-size: 600px 100%;
+    animation: shimmer 1.5s linear infinite;
+}
+
+/* ——— Scroll Bounce ——— */
+@keyframes scroll-bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(8px);
+        opacity: 1;
+    }
+}
+
+/* ——— Shimmer Line (AI description bar) ——— */
+@keyframes shimmer-line {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* ——— Float ——— */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ——— Glow Pulse ——— */
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 50px rgba(59, 130, 246, 0.5), 0 0 80px rgba(59, 130, 246, 0.2);
+    }
+}
+
+/* ——— Counter Increment ——— */
+@keyframes counter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ——— CTA Ripple ——— */
+.btn--primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15), transparent 60%);
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.5s var(--ease), opacity 0.5s var(--ease);
+}
+
+.btn--primary:active::before {
+    opacity: 1;
+    transform: scale(2.5);
+    transition: none;
+}
+
+/* ——— Hero entry animations ——— */
+.hero-anim-1 {
+    animation: slideInLeft 0.8s var(--ease) both;
+}
+
+.hero-anim-2 {
+    animation: slideUp 0.8s 0.15s var(--ease) both;
+}
+
+.hero-anim-3 {
+    animation: slideUp 0.8s 0.3s var(--ease) both;
+}
+
+.hero-anim-4 {
+    animation: slideUp 0.8s 0.45s var(--ease) both;
+}
+
+/* ——— Card stagger ——— */
+.car-card:nth-child(1) {
+    animation: fadeIn 0.5s 0.05s var(--ease) both;
+}
+
+.car-card:nth-child(2) {
+    animation: fadeIn 0.5s 0.10s var(--ease) both;
+}
+
+.car-card:nth-child(3) {
+    animation: fadeIn 0.5s 0.15s var(--ease) both;
+}
+
+.car-card:nth-child(4) {
+    animation: fadeIn 0.5s 0.20s var(--ease) both;
+}
+
+.car-card:nth-child(5) {
+    animation: fadeIn 0.5s 0.25s var(--ease) both;
+}
+
+.car-card:nth-child(6) {
+    animation: fadeIn 0.5s 0.30s var(--ease) both;
+}
+
+/* ——— Brand card hover glow ——— */
+.brand-card {
+    animation: fadeIn 0.5s var(--ease) both;
+}
+
+.brand-card:hover .brand-card__logo {
+    animation: float 2s ease-in-out infinite;
+}
+
+/* ——— Neon border on card hover ——— */
+.car-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--accent), #7C3AED, var(--accent));
+    background-size: 200%;
+    opacity: 0;
+    transition: opacity var(--normal) var(--ease);
+    z-index: -1;
+    animation: shimmer-line 4s linear infinite;
+}
+
+.car-card {
+    position: relative;
+}
+
+.car-card:hover::before {
+    opacity: 0.6;
+}
+
+/* ——— Stat counter animation ——— */
+.stat-count {
+    display: inline-block;
+    animation: counter 0.6s var(--ease) both;
+}
+
+/* ——— Loading dots ——— */
+@keyframes loading-dot {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.4);
+        opacity: 0.4;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.loading-dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    padding: var(--space-xl);
+}
+
+.loading-dots span {
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.loading-dots span:nth-child(1) {
+    animation: loading-dot 1.2s ease 0s infinite;
+}
+
+.loading-dots span:nth-child(2) {
+    animation: loading-dot 1.2s ease 0.2s infinite;
+}
+
+.loading-dots span:nth-child(3) {
+    animation: loading-dot 1.2s ease 0.4s infinite;
+}
+
+/* ——— Compare winner highlight pulse ——— */
+.compare-table .winner {
+    animation: glow-pulse 2.5s ease-in-out infinite;
+}
+
+/* ——— Smooth image swap ——— */
+.detail-hero img {
+    animation: fadeIn 0.4s var(--ease) both;
+}
+
+/* ——— Staggered reveal ——— */
+.reveal:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.reveal:nth-child(2) {
+    transition-delay: 0.08s;
+}
+
+.reveal:nth-child(3) {
+    transition-delay: 0.16s;
+}
+
+.reveal:nth-child(4) {
+    transition-delay: 0.24s;
+}
+
+.reveal:nth-child(5) {
+    transition-delay: 0.32s;
+}
