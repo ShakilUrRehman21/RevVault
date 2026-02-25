@@ -1,11 +1,11 @@
-# 🚗 RevVault
+#  RevVault
 
 RevVault is a premium automotive discovery platform built with **Next.js**.  
 It delivers a fast, modern, and immersive experience for exploring high-performance vehicles with advanced filtering, comparison tools, and personalized recommendations.
 
 ---
 
-## 🏎 Brands Featured
+##  Brands Featured
 
 - Ferrari  
 - Lamborghini  
@@ -17,19 +17,19 @@ It delivers a fast, modern, and immersive experience for exploring high-performa
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-- ⚡ Built with Next.js
-- 🎨 Modern dark-themed UI
-- 🔍 Advanced filtering & search
-- ⚔ Side-by-side car comparison
-- 🧠 AI-powered recommendations
-- 📊 Personalized dashboard
-- 📱 Fully responsive
+-  Built with Next.js
+-  Modern dark-themed UI
+-  Advanced filtering & search
+-  Side-by-side car comparison
+-  AI-powered recommendations
+-  Personalized dashboard
+-  Fully responsive
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - Next.js
 - React
@@ -38,7 +38,7 @@ It delivers a fast, modern, and immersive experience for exploring high-performa
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ```bash
 git clone https://github.com/ShakilUrRehman21/RevVault.git
